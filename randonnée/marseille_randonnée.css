@@ -1,0 +1,222 @@
+/*menu*/
+
+header {
+	text-align: center;
+	background-color: #0a6daa;
+	color: white;
+}
+
+a {
+	font-weight: bold;
+}
+
+nav {
+	margin-top: 64px;
+    width: 100%;
+    background-color: #0a6daa;
+    position: sticky;
+    top: 0px;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    float: left;
+    width: 16%;
+    text-align: center;
+    position: relative;
+}
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0px;
+}
+
+.sub-menu{
+    display: none;
+    box-shadow: 0px 2px 4px #CCC;
+    background-color: #0a6daa;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sub-menu{
+    display: block;
+}
+.sub-menu li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sub-menu a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sub-menu a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.menu-container > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.menu{
+	display: none;
+	background-image: url(assets/Burger.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 10vh;
+	height: 10vh;
+}
+
+/* fin menu */
+
+/* main */
+
+.mainimg{
+    margin-left: 20vh;
+    height: 60vh;
+    width: 189vh;
+    background-image: url(assets/trek/plan-calanque.jpg);
+    background-repeat: no-repeat;
+}
+
+.title{
+    margin-left: 118vh;
+    font-size: 150%;
+    margin-top: 7vh;
+    font-family: 'MetropolitanoRegular';
+}
+
+.en-vau,.sugiton,.callelongue,.marseilleveyre,.morgiou,.sormiou{
+    display: flex;
+    margin-top: 12vh;
+    margin-left: 42vh;
+    width: 140vh;
+    justify-content: center;
+    font-family: 'MetropolitanoRegular';
+    background-color: whitesmoke;
+    transition-property: background-color;
+    transition-duration: 2s;
+    height: 42vh;
+}
+
+.text1,.text2,.text3,.text4,.text5,.text6{
+    justify-content: flex-end;
+    margin-left: 3vh;
+}
+
+.en-vau:hover,.sugiton:hover,.morgiou:hover,.sormiou:hover,.callelongue:hover,.marseilleveyre:hover{
+    background-color: rgb(176, 230, 212);
+}
+
+/* fin main */
+
+/* footer */
+
+footer {
+	color: white;
+	background-color: #363636;
+	background-image: url('assets/logo_footer.jpg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0px;
+	justify-content: center;
+}
+
+.footer_links {
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+}
+
+.footer_links > div {
+	width: 100%;
+	margin-top: 64px;
+	margin-bottom: 64px;
+	border-color: whitesmoke;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.socials_links {
+	margin-bottom: 3vh;
+    display: flex;
+    gap: 8vh;
+}
+
+footer a:link { text-decoration: none; color: white; }
+footer a:visited { text-decoration: none; color: white; }
+footer a:hover { text-decoration: none; color: white; }
+footer a:active { text-decoration: none; color: white; }
+
+/* fin footer */
+
+/* media menu/footer */
+
+@media all and (max-width: 480px){
+	nav{
+		display: none;
+	}
+	.menu{
+		display: block;
+	}
+
+    footer{
+		font-size: 80%;
+	}
+	
+	.footer_links {
+		width: 50vh;
+	}
+
+}
+
+/* fin media menu/footer */
+
+/* media main */
+
+@media all and (max-width: 480px){
+
+    .mainimg{
+        margin-left: 0;
+        width: 77vh;
+        height: 25vh;
+        background-size:95%;
+    }
+
+    .title{
+        margin-left: 0;
+        font-size: 120%;
+    }
+
+    .en-vau,.sugiton,.callelongue,.marseilleveyre,.morgiou,.sormiou{
+        margin-left: 10vh;
+        flex-direction: column;
+        margin-top: 5vh;
+        width: 60vh;
+        background-color: whitesmoke;
+        width: 48vh;
+        height: 110vh;
+    }
+
+    .text1,.text2,.text3,.text4,.text5,.text6{
+        font-size: 85%;
+        margin-left: 0;
+        width: 50vh;
+        text-align: center;
+    }
+
+}
+
+/* fin media main */
