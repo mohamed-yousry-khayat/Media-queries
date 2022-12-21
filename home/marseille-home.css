@@ -1,128 +1,8 @@
-body {
-	margin: auto;   /* centers <body> */
-    font-family: "MetropolitanoRegular";
-	/*font-family: 'AvaraBold';
-	font-weight: normal;
-	font-style: normal;*/
-   
-}
-
-header {
-	text-align: center;
-	background-color: #0a6daa;
-	color: white;
-}
-
-a {
-	font-weight: bold;
-}
-
-nav {
-	margin-top: 64px;
-    width: 100%;
-    background-color: #0a6daa;
-    position: sticky;
-    top: 0px;
-}
-nav ul {
-    list-style-type: none;
-}
-nav ul li {
-    float: left;
-    width: 16%;
-    text-align: center;
-    position: relative;
-}
-nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 10px 0px;
-}
-
-.sub-menu{
-    display: none;
-    box-shadow: 0px 2px 4px #CCC;
-    background-color: #0a6daa;
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
-}
-nav > ul li:hover .sub-menu{
-    display: block;
-}
-.sub-menu li{
-    float: none;
-    width: 100%;
-    text-align: left;
-}
-.sub-menu a{
-    padding: 10px;
-    border-bottom: none;
-}
-.sub-menu a:hover{
-    border-bottom: none;
-    background-color: RGBa(200,200,200,0.1);
-}
-.menu-container > a::after{
-    content:" ▼";
-    font-size: 12px;
-}
-
-
-main {
-	margin: -16px 0px;
-}
-
-footer {
-	color: white;
-	background-color: #363636;
-	background-image: url('assets/logo_footer.jpg');
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0px;
-	justify-content: center;
-}
-
-.footer_links {
-	display: flex;
-	gap: 32px;
-	justify-content: center;
-}
-
-.footer_links > div {
-	width: 100%;
-	margin-top: 64px;
-	margin-bottom: 64px;
-	border-color: whitesmoke;
-	border-top: 1px solid;
-	border-bottom: 1px solid;
-}
-
-.socials_links {
-	margin-bottom: 3vh;
-    display: flex;
-    gap: 8vh;
-}
-
-footer a:link { text-decoration: none; color: white; }
-footer a:visited { text-decoration: none; color: white; }
-footer a:hover { text-decoration: none; color: white; }
-footer a:active { text-decoration: none; color: white; }
-
 .flex_downwards {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 8vh;
     align-items: center;
     justify-content: center; 
 }
@@ -148,7 +28,7 @@ footer a:active { text-decoration: none; color: white; }
 
 section {
 	overflow: hidden;
-	margin-bottom: 32px;
+	margin-bottom: 2em;
 	width: 20vw;
 	border-radius: 0.4em;
 	background-color: whitesmoke;
@@ -187,15 +67,14 @@ section:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 48px;
+	gap: 3em;
 	color: #ffffff;
 	overflow: hidden;
 	background-image: url('assets/home/bg_form.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	margin-bottom: 16px;
-	padding-bottom: 48px;
+	padding-bottom: 3em;
 }
 
 .form_layout > h1 {
@@ -212,7 +91,6 @@ section:hover {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #662828;
@@ -225,7 +103,6 @@ section:hover {
 	top:1px;
 }
 
-
 main {
 	background-image: url('https://www.hotel-residence-marseille.com/_novaimg/4940466-1486267_0_0_4800_3204_2097_1400.jpg');
 	background-position: center;
@@ -233,59 +110,47 @@ main {
 	background-repeat: no-repeat;
 }
 
-.menu{
-	display: none;
-	background-image: url(assets/Burger.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	width: 10vh;
-	height: 10vh;
-}
-
-.lli1,.lli2,.lli3{
-	display: none;
-}
-
-@media all and (max-width: 480px){
-	nav{
-		display: none;
-	}
-	.menu{
-		display: block;
-	}
-	h1{
-		margin-top: 4vh;
-		font-size: 120%;
-	}
-	
-	.lli1,.lli2,.lli3{
-		display: block;
-		overflow: hidden;
-		width: 60vw;
+/* MEDIA QUERIES FOR TABLET VIEW 810px 1080px */
+@media all and (max-device-width: 820px) {
+	section {
+		width: 70vw;
 		border-radius: 0.4em;
-		background-color: whitesmoke;
-		box-shadow: 1px 1px 3px 1px gray;
 	}
 
-	.c_places{
-		display: none;
+	section:hover {
+		border-radius: 2em;
 	}
 
-	.c_beach{
-		display: none;
+	.section_container {
+		display: flex;
+		flex-direction: column;
+		gap: 1vh;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.c_walk{
-		display: none;
+	.flex_downwards {
+		gap: 2vh;
+	}
+}
+
+/* MEDIA QUERIES FOR MOBILE VIEW 320px 480px */
+@media all and (max-device-width: 480px) {
+	section {
+		margin-bottom: 2em;
+		width: 90vw;
+		border-radius: 0.4em;
 	}
 
-	footer{
-		font-size: 80%;
-	}
-	
-	.footer_links {
-		width: 50vh;
+	section:hover {
+		border-radius: 1.5em;
 	}
 
-	
+	.section_container {
+		display: flex;
+		flex-direction: column;
+		gap: 4vw;
+		align-items: center;
+		justify-content: center;
+	}
 }
